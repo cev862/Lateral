@@ -8,7 +8,7 @@ function doGet(e) {
     .sort((a,b) => getDuration(a) - getDuration(b))
     .find(e => e.getStartTime() <= now);
   if(qrEvt){
-    return ContentService.createTextOutput(qrEvt.getDescription()); 
+    return ContentService.createTextOutput(qrEvt.getLocation()); 
   }
 }
 
